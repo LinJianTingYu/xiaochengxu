@@ -1,0 +1,45 @@
+<!--components/search/search.wxml-->
+<view class='search-page'>
+  <view class='header'>
+    <view class='search-box'>
+      <image class='search-icon' src="./images/search.png"></image>
+      <input confirm-type="done" bindconfirm="searchItem" class="input" type="text" bindinput="valChange" value="{{val}}" placeholder='书籍名'></input>
+      <image class='clear-icon' src="./images/cancel.png" catchtap="delVal"></image>
+    </view>
+    <text class='close-search' catchtap='closeSearch'>取消</text>
+  </view>
+  <scroll-view scroll-y class='search-wrapper' bindscrolltolower="scrollBottom">
+    <view class='search-content' wx:if="{{!isShowResult}}">
+      <view class='search-hot'>
+        <view class='title'>
+          <view class='chunk'></view>
+          <text class='text'>热门搜索</text>
+        </view>
+        <view class='tags'>
+          <block wx:for="{{hot_list}}" wx:key="{{index}}">
+            <text class='tag-item' catchtap='searchItem' data-query="{{item}}">{{item}}</text>
+          </block>
+        </view>
+      </view>
+      <view class='search-history'>
+        <view class='title'>
+          <view class='chunk'></view>
+          <text class='text'>历史搜索</text>
+        </view>
+        <view class='tags'>
+          <block wx:for="{{searchHistory}}" wx:key="{{index}}">
+            <text class='tag-item' catchtap='searchItem' data-query="{{item}}">{{item}}</text>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class='search-result' wx:else>
+      <book-list book_hotList="{{searchResult}}" wx:if="{{searchResult.length}}"></book-list>
+      <loading wx:if="{{!isSearchMore}}" class='loading-wrapper'></loading>
+      <view class='no-result' wx:if="{{!searchResult.length}}">
+        <text class='text'>没有搜索到书籍</text>
+      </view>
+    </view>
+    <loading wx:if="{{loadingCenter}}" class="loading-center"></loading>
+  </scroll-view>
+</view>

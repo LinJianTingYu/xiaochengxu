@@ -1,0 +1,43 @@
+<!--pages/my/my.wxml-->
+<view class='my'>
+  <view class='header'>
+    <image src="/image/my/my@bg.png" class="bg"></image>
+    <view class='avatar-container'>
+      <button
+        wx:if="{{!hasUserInfo}}"
+        open-type="getUserInfo"
+        bindgetuserinfo="bindGetUserInfo">
+        <image slot="img" class="avatar" src="/image/my/my.png" /> 
+      </button>
+      <image wx:if="{{hasUserInfo}}" src="{{userInfo.avatarUrl}}" class='user-icon'></image>
+      <open-data wx:if="{{hasUserInfo}}" type="userNickName"></open-data>
+    </view>
+    <view class="about-container">
+      <view bind:tap="onJumpToAbout" class="about-us">
+        <image src="/image/my/about.png" />
+        <text class="description">关于我们</text>
+      </view>
+      <view class="about-us">
+        <text class="book-num">{{favorCount}}</text>
+        <text class="description">喜欢的书</text>
+      </view>
+    </view>
+  </view>
+  <view class='my-wrapper'>
+    <view class='title'>
+      <image class="headline" src="/image/my/like.png" />
+    </view>
+    <view class='content'>
+      <block wx:for="{{myFavor}}" wx:key="{{index}}">
+        <view class='content-item' catchtap="showDetail" data-item="{{item}}">
+          <view class='content-item-header'>
+            <text class='tag'>{{typeText[item.type]}}</text>
+            <like content="{{item}}"></like>
+          </view>
+          <image class="{{item.type==200?'music-img':'other-img'}}" src="{{item.image}}"></image>
+          <view class="text">{{item.content}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<!--components/classic/music/music.wxml-->
+<view class='music'>
+  <view class='music-content'>
+    <image class="classic-img" src="{{content.image}}"></image>
+    <image class="play" src="{{playing? './images/player@playing.png' : './images/player@waitting.png'}}" catchtap='playMusic'></image>
+  </view>
+  <image class="tag" src="./images/music@tag.png"></image>
+  <text class='content'>{{content.content}}</text>
+</view>

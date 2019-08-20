@@ -1,0 +1,19 @@
+<view class="header">
+  <view class='num'>
+    <text class='title'>No.</text>
+    <text class='number'>{{currentIndex}}</text>
+  </view>
+  <view class='border'></view>
+  <view class='data'>
+    <text class='month'>{{month}}</text>
+    <text class='year'>{{year}}</text>
+  </view>
+  <like content="{{content}}" bindchangLike="changLike"></like>
+  <!-- <view class='favorite'>
+    <image class='favorite-icon' src="{{content.like_status?'/image/icon/like.png':'/image/icon/like@dis.png'}}" catchtap='favoriteItem'></image>
+    <text class='favorite-num'>{{content.fav_nums}}</text>
+  </view> -->
+  <!-- <view class='share'>
+    <image src="/image/icon/share.png"></image>
+  </view> -->
+</view>

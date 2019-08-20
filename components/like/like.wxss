@@ -1,0 +1,15 @@
+/* components/like/like.wxss */
+.favorite{
+  margin: 0 10rpx;
+}
+.favorite-icon{
+  width: 35rpx;
+  height: 35rpx;
+}
+.favorite-num{
+  position: relative;
+  font-size: 26rpx;
+  color: rgb(197, 197, 197);
+  top: -15rpx;
+  left: 5rpx;
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "book-list": "/components/bookList/bookList",
+    "loading": "/components/loading/loading"
+  }
+}

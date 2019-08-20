@@ -1,0 +1,16 @@
+ <view class="entertainment">
+  <view class="content">
+    <view wx:for="{{menus}}"
+          wx:key='{{index}}'
+          class="{{item.name}}"
+          class="nav_item"
+          data-name='{{item.name}}'
+          bindtap="handleRoute">
+      <image  class='icon'
+            src="{{item.icon}}"
+            alt=""></image >
+      <text class="text">{{item.title}}</text>
+      <text class="info">{{item.info}}</text>
+    </view>
+  </view>
+</view>

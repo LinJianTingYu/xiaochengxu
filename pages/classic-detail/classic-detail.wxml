@@ -1,0 +1,7 @@
+<view class="classic">
+  <header class="header" content="{{currentData}}" currentIndex="{{currentIndex}}" bindfavoriteItem="favoriteItem">
+  </header>
+  <movie wx:if="{{currentData.type==100}}" content="{{currentData}}"></movie>
+  <easy wx:if="{{currentData.type==300}}" content="{{currentData}}"></easy>
+  <music wx:if="{{currentData.type==200}}" content="{{currentData}}"></music>
+</view>

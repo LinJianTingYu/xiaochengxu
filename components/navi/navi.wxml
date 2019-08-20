@@ -1,0 +1,6 @@
+<!--components/navi/navi.wxml-->
+<view class='navi'>
+  <image src="{{latest ? '/assets/img/movie/triangle.dis@left.png':'/assets/img/movie/triangle@left.png'}}" catchtap="prev" disable="{{!latest}}"></image>
+  <text class='content'>{{title}}</text>
+  <image src="{{first?'/assets/img/movie/triangle.dis@right.png':'/assets/img/movie/triangle@right.png'}}" catchtap="next" disable="{{!first}}"></image>
+</view>

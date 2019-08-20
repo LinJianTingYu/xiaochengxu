@@ -1,0 +1,108 @@
+/* components/search/search.wxss */
+.search-page{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: white;
+}
+.header{
+  display: flex;
+  background: white;
+  padding: 20rpx 10rpx;
+  border-top: 2rpx solid rgb(247,247,247);
+  border-bottom: 2rpx solid rgb(247,247,247);
+}
+.search-box{
+  display: flex;
+  background: rgb(247, 247, 247);
+  height: 70rpx;
+  border-radius: 70rpx;
+  width: 85%;
+  align-items: center;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+
+}
+.search-icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.input{
+  flex: 1;
+  margin-left: 10rpx;
+  font-size: 32rpx;
+  color: rgb(150, 150, 150)
+}
+.clear-icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.close-search{
+  flex: 1;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 36rpx;
+}
+.search-wrapper{
+  position: fixed;
+  top: 112rpx;
+  bottom: 0;
+  width: 100%;
+}
+.search-content{
+  padding: 30rpx;
+}
+.search-history{
+  margin-top: 30rpx;
+}
+.title{
+  display: flex;
+  align-items: center;
+  height: 66rpx;
+}
+.chunk{
+  width: 10rpx;
+  height: 36rpx;
+  background: black;
+  display: inline-block;
+  margin-right: 20rpx;
+}
+.text{
+  font-size: 32rpx;
+}
+.tags{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.tag-item{
+  background: rgb(247,247,247);
+  margin: 15rpx;
+  padding: 10rpx 20rpx;
+  color: rgb(100,100,100);
+  font-size: 30rpx;
+  border-radius: 5rpx; 
+}
+.search-result{
+  width: 100%;
+  height: 100%;
+}
+.no-result{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading-wrapper{
+  height:40rpx;
+  width: 200rpx;
+}
+.loading-center{
+  position:fixed;
+  top:112rpx;
+  bottom:0;
+  width:100%;
+  background: white;
+}

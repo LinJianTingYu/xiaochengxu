@@ -1,0 +1,46 @@
+/* pages/book/book.wxss */
+.header{
+  border-top: 2rpx solid rgb(247,247,247);
+  border-bottom: 2rpx solid rgb(247,247,247);
+  padding: 20rpx 0;
+  background: white;
+}
+.search{
+  height: 70rpx;
+  line-height: 70rpx;
+  margin: 0 4%;
+  background: rgb(247,247,247);
+  border-radius: 70rpx; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.search-icon{
+  width: 36rpx;
+  height: 36rpx;
+  position: relative;
+  top: 17rpx;
+  margin-right: 10rpx; 
+}
+.text{
+  font-size: 34rpx;
+  color: rgb(150, 150, 150)
+}
+
+.book-list{
+  width: 100%;
+  position: absolute;
+  top: 112rpx;
+  bottom: 0;
+  background: rgb(248,248,248);
+}
+
+.title{
+  text-align: center;
+  padding-top: 30rpx;
+}
+.title image{
+  width: 107rpx;
+  height: 34rpx;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "comfirm": "/components/comfirm/comfirm",
+    "like": "/components/like/like"
+  }
+}

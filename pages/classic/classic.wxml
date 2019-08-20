@@ -1,0 +1,8 @@
+<view class="classic">
+  <header class="header" currentIndex="{{currentIndex}}" content="{{currentData}}" bindfavoriteItem="favoriteItem">
+  </header>
+  <movie wx:if="{{currentData.type==100}}" content="{{currentData}}"></movie>
+  <easy wx:if="{{currentData.type==300}}" content="{{currentData}}"></easy>
+  <music wx:if="{{currentData.type==200}}" content="{{currentData}}"></music>
+  <navi latest="{{latest}}" first="{{first}}" bindprevPage="prevPage" bindnextPage="nextPage" title="{{currentData.title}}"></navi>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "serch-view": "/components/search/search",
+    "book-list": "/components/bookList/bookList"
+  }
+}

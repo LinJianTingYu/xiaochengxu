@@ -1,0 +1,75 @@
+/* components/entertainment/movie-list/movie-list.wxss */
+.book_list {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 3;
+  bottom: 0;
+  box-sizing: border-box;
+}
+  .books {
+    position: absolute;
+    overflow: hidden;
+    top: 80rpx;
+    width: 100%;
+    bottom: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background: white;
+  }
+  .movie_item {
+    display: flex;
+    padding: 30rpx 0;
+    background: white;
+    overflow: hidden;
+    font-size: 24rpx;
+    box-sizing: border-box;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(223, 223, 223);
+  }
+    image.movie_face {
+      width: 160rpx;
+      height: 210rpx;
+      border-radius: 5px;
+    }
+    .desc {
+      margin-left: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+      height: 70%;
+      padding-top: 5px;
+    }
+      .info {
+        display: flex;
+        flex-direction: column;
+      }
+      
+        .info>.title {
+          font-size: 30rpx;
+          font-weight: bold;
+          color: black;
+        }
+        .info>p {
+          width: 400rpx;
+          line-height: 30rpx;
+          margin: 3rpx 0;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          color: #818181;
+        }
+        .info>.rate {
+          margin-top: 2px;
+        }
+      .editor {
+        display: flex;
+        align-items: center;
+        padding: 0 5px 0 15px;
+        border-left: 1px dashed #d8d8d8;
+      }
+  .loading {
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 40rpx;
+  }

@@ -1,0 +1,23 @@
+/* components/classic/movie/movie.wxss */
+.classic-img{
+  width: 100%;
+  height:500rpx;
+}
+.tag{
+  width:46rpx;
+  height:142rpx;
+  position: relative;
+  top: -71rpx;
+  left: 70rpx;
+}
+.content{
+  display: block;
+  color: #0f0f0f;
+  position: relative;
+  top: -10rpx;
+  width: 100%;
+  text-align: center;
+  padding:0 15%;
+  box-sizing: border-box;
+  font-size: 32rpx;
+}

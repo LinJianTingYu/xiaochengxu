@@ -1,0 +1,52 @@
+<!--pages/movie/movie.wxml-->
+  <view class="movie">
+    <view class='header'>
+      <image class='back'
+           src='/assets/img/icon/箭头.png'>
+      </image>
+      <view class='search'
+           bindtap='handleSearch'>
+        <image class='search-icon'
+             src='/assets/img/icon/search.png'>
+        </image>
+        <span class='text'>搜索电影</span>
+      </view>
+    </view>
+    <wxs module="base" src="../../utils/base.wxs"></wxs>
+    <scroll-view scroll-y class="movies">
+      <movie-wrapper
+        wx:if='{{TheatersMovies.length}}'
+        movies='{{base.getNewMovies(TheatersMovies)}}'
+        title='{{typeTitle.theater}}'
+        bindshowMoreMovie='showMoreMovie'
+        bindgoMovieDetail='goMovieDetail'
+        ></movie-wrapper>
+        <movie-wrapper movies='{{base.getNewMovies(commingMovies)}}'
+                        title='{{typeTitle.comming}}'
+                        bindshowMoreMovie='showMoreMovie'
+                        bindgoMovieDetail='goMovieDetail'
+                        class='margin_top'
+        wx:if='{{commingMovies.length}}'></movie-wrapper>
+        <movie-wrapper movies="{{base.getNewMovies(topMovies)}}"
+                        title='{{typeTitle.top}}'
+                        bindshowMoreMovie='showMoreMovie'
+                        bindgoMovieDetail='goMovieDetail'
+                        class='margin_top'></movie-wrapper>
+        <movie-wrapper movies='{{base.getNewMovies(newMovies)}}'
+                        title='{{typeTitle.new}}'
+                        bindshowMoreMovie='showMoreMovie'
+                        bindgoMovieDetail='goMovieDetail'
+                        class='margin_top'></movie-wrapper>
+    </scroll-view>
+    <!-- <search-page v-if='isShowSearchPage'
+                  @closeSearch='closeSearch'
+                  @goMovieDetail='goMovieDetail'>
+    </search-page> -->
+    <movie-list wx:if='{{isShowMovieList}}'
+              movies='{{moreMovies}}'
+              title='{{moreMovieTitle}}'
+              bindcloseMoreMovie='isShowMovieList=!isShowMovieList'
+              bindgetMoreMovie='{{getMoreTypeMovie}}'
+              loadingMore='{{loadingMore}}'>
+    </movie-list>
+  </view>

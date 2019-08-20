@@ -1,0 +1,53 @@
+/* components/entertainment/movie-type/movie-type.wxss */
+
+.movies_wrapper {
+  background: white;
+  padding: 0 20rpx;
+  margin: 20rpx 0;
+}
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+  }
+  
+    .title {
+      font-size: 34rpx;
+      font-weight: bold;
+    }
+    .more {
+      font-size: 26rpx;
+      font-weight: 550;
+    }
+
+    
+  .movies_list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+    .movie_item {
+      position: relative;
+      width: calc(100% / 3);
+      box-sizing: border-box;
+      padding: 0 5px 10px;
+    }
+      image {
+        width: 100%;
+        height: 260rpx;
+        border-radius: 5px;
+      }
+      .name {
+        display: inline-block;
+        width: 100%;
+        font-size: 28rpx;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-top: 5rpx
+      }
+      .rate {
+        margin-top: 0.08rem;
+      }

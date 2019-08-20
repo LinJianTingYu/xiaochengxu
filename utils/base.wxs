@@ -1,0 +1,19 @@
+var base = {
+  sliceMovies: function (arr) {
+    return arr.slice(0,6)
+  },
+  getDir: function (edis) {
+    console.log(edis)
+    let ed = ''
+    // edis.forEach(function (item){
+    //     ed += ' / ' + item.name
+    //   }
+    // }
+    return ed.slice(2)
+  }
+}
+
+module.exports = {
+  getNewMovies: base.sliceMovies,
+  getDir: base.getDir
+}

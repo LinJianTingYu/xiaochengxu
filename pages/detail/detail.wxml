@@ -1,0 +1,64 @@
+<!--pages/detail/detail.wxml-->
+<view class='detail'>
+  <scroll-view scroll-y class='detail-scroll'>
+    <view class='detail-wrapper'>
+      <view class='header'>
+        <view class='book-face'>
+          <image src="{{bookdetail.image}}"></image>
+        </view>
+        <text class='title'>{{bookdetail.title}}</text>
+        <text class='author'>{{bookdetail.author}}</text>
+      </view>
+      <view class='comment'>
+        <view class='comment-header'>短评</view>
+        <view class='comment-wrapper'>
+          <block wx:for="{{short_comment.comments}}" wx:key="{{index}}">
+            <view class='comment-item'>
+              <text class='comment-content'>{{item.content}}</text>
+              <text class='comment-nums'>+{{item.nums}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class='summary'>
+        <view class='summary-header'>内容简介</view>
+        <view class='summary-wrapper'>
+          <text>{{summary}}</text>
+        </view>
+      </view>
+      <view class='book-message'>
+        <view class='book-message-header'>书本信息</view>
+        <view class='book-message-wrapper'>
+          <view>
+            <text class='lable'>出版社</text>
+            <text class='info'>{{bookdetail.publisher}}</text>
+          </view>
+          <view>
+            <text class='lable'>出版时间</text>
+            <text class='info'>{{bookdetail.pubdate}}</text>
+          </view>
+          <view>
+            <text class='lable'>页数</text>
+            <text class='info'>{{bookdetail.pages}}</text>
+          </view>
+          <view>
+            <text class='lable'>定价</text>
+            <text class='info'>{{bookdetail.price}}</text>
+          </view>
+          <view>
+            <text class='lable'>装帧</text>
+            <text class='info'>{{bookdetail.binding}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='fixed'>
+    <view class='input' catchtap='showComfirm'>
+      <image style="width:35rpx;height:35rpx;" src="/image/book/书单-详情-写短评@2x.png"></image>
+      <text class='tip'>留下你的短评~</text>
+    </view>
+    <like content="{{favor}}" class="like-wrapper"></like>
+  </view>
+  <comfirm wx:if="{{isShowComfirm}}" bindresetcomments="resetcomments" comments="{{short_comment}}" bindonCancel="onCancel"></comfirm>
+</view>

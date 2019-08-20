@@ -1,0 +1,12 @@
+<view class='book-list-wrapper'>
+  <block wx:for="{{book_hotList}}" wx:key="{{index}}">
+    <view class='book-list-item' catchtap='showBookDetail' data-book="{{item}}">
+        <image class='bppk-face' src="{{item.image}}"></image>
+        <view class='desc'>
+          <text class='book-title'>{{item.title}}</text>
+          <text class='book-author'>{{item.author}}</text>
+          <text class='book-fav'>{{item.fav_nums}} 喜欢</text>
+        </view>
+    </view>
+  </block>
+</view>

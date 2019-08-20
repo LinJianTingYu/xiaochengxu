@@ -1,0 +1,56 @@
+/* pages/movie/movie.wxss */
+
+.movie {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  background: white;
+  z-index: 2;
+}
+.header {
+  padding: 20rpx;
+  height: 110rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+    .search {
+      flex: 1;
+      height: 70rpx;
+      line-height: 70rpx;
+      margin-left: 6%;
+      border-radius: 70rpx;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background: rgba(244, 244, 244, 0.6);
+    }
+      .search-icon {
+        width: 36rpx;
+        height: 36rpx;
+        position: relative;
+        top: 16rpx;
+        margin-right: 10rpx;
+      }
+      .text {
+        font-size: 34rpx;
+        color: rgb(150, 150, 150);
+      }
+    .back {
+      width: 28rpx;
+      height: 40rpx;
+    }
+  .movies {
+    position: fixed;
+    top: 111rpx;
+    bottom: 0rem;
+    width: 100vw;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: rgb(242, 242, 242);
+  }
+    .margin_top {
+      margin-top: 30rpx;
+    }

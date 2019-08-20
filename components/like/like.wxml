@@ -1,0 +1,5 @@
+<!--components/like/like.wxml-->
+<view class='favorite'>
+  <image class='favorite-icon' src="{{content.like_status?'/image/icon/like.png':'/image/icon/like@dis.png'}}" catchtap='favoriteItem'></image>
+  <text class='favorite-num'>{{content.fav_nums}}</text>
+</view>

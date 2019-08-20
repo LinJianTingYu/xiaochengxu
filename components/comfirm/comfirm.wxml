@@ -1,0 +1,20 @@
+<!--components/comfirm/comfirm.wxml-->
+<view class='comfirm'>
+  <view class="mask"></view>
+  <view class='confirm-wrapper'>
+    <view class="post-header">
+      <text class="comf">确认</text>
+      <text  wx:if="{{(comments.comments==false)}}">暂无短评</text>
+      <text class="cancel" bind:tap="onCancel">取消</text>
+    </view>
+    <view class='comment-wrapper'>
+      <block wx:for="{{comments.comments}}" wx:key="{{index}}" wx:if="{{index<3}}">
+        <view class='comment-item' catchtap="onPost" data-content="{{item.content}}">
+          <text class='comment-content'>{{item.content}}</text>
+          <text class='comment-nums'>+{{item.nums}}</text>
+        </view>
+      </block>
+    </view>
+    <input confirm-type="done" type="text" focus="true" class="post" placeholder='短评最多12个字' bindconfirm="onPost"></input>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<!--components/entertainment/movie-type/movie-type.wxml-->
+<view class="movies_wrapper">
+    <view class="head">
+      <text class="title">{{title}}</text>
+      <text bindtap='handleMore'
+            class="more">全部 ></text>
+    </view>
+    <ul class="movies_list">
+      <li wx:for='{{movies}}'
+          wx:key='{{index}}'
+          class="movie_item"
+          data-id="{{item.id}}"
+          data-item='{{item.title}}'
+          bindtap='showMovieDetail'>
+        <!-- <view class="icons" @click='favMovie(item.id)'>
+          <i class="iconfont icon-xiangkan"></i>
+        </view> -->
+        <image src="{{item.images.small}}"
+             alt=""></image>
+        <p class="name">{{item.title}}</p>
+        <rate class="rate"
+              wx:if='{{item.rating.average}}'
+              rate='{{item.rating.average}}'></rate>
+      </li>
+    </ul>
+  </view>

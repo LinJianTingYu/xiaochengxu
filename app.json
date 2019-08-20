@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/movie/movie",
+    "pages/entertainment/entertainment",
+    "pages/classic/classic",
+    "pages/book/book",
+    "pages/my/my",
+    "pages/detail/detail",
+    "pages/classic-detail/classic-detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fbf9f1",
+    "navigationBarTitleText": "林间听雨",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "backgroundColor": "white",
+    "selectedColor": "black",
+    "list": [
+      {
+        "pagePath": "pages/entertainment/entertainment",
+        "text": "娱乐",
+        "iconPath": "image/tab/book.png",
+        "selectedIconPath": "image/tab/book@highlight.png"
+      },
+      {
+        "pagePath": "pages/classic/classic",
+        "text": "流行",
+        "iconPath": "image/tab/classic.png",
+        "selectedIconPath": "/image/tab/classic@highlight.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "今天",
+        "iconPath": "image/tab/my.png",
+        "selectedIconPath": "image/tab/my@highlight.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "image/tab/my.png",
+        "selectedIconPath": "image/tab/my@highlight.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

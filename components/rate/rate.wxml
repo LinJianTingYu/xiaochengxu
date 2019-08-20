@@ -1,0 +1,14 @@
+<!--components/rate/rate.wxml-->
+<template>
+  <div class="rate">
+    <div class="rate_wrapper">
+      <div ref='bgWidth'
+           class="bg">★★★★★</div>
+      <!-- <div class="active"
+           bind:style='{{width: setWidth(rate)}}'>★★★★★</div> -->
+    </div>
+    <span>{{rate}}</span>
+  </div>
+  <!-- <div class="no_rate"
+       wx:else>暂无评分</div> -->
+</template>

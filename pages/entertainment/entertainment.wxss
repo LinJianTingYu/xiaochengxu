@@ -1,0 +1,47 @@
+/* pages/entertainment/entertainment.wxss */
+
+.entertainment {
+  background: rgb(247, 247, 247);
+  position: absolute;
+  top: 0;
+  bottom: 0rem;
+  width: 100vw;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 8vw 6vw;
+}
+.icon {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  margin: 29rpx 0;
+  // background: red;
+}
+.nav_item {
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 5px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+.iconfont {
+  font-size: 60rpx;
+}
+.text {
+  font-size: 38rpx;
+  line-height: 50rpx;
+  // font-weight: 550;
+}
+.info {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  color: rgb(180, 180, 180);
+}
