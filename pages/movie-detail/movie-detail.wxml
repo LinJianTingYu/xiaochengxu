@@ -1,0 +1,82 @@
+<!--pages/movie-detail/movie-detail.wxml-->
+<view class="movie_detail" wx:if='{{movie}}'>
+    <view class="bgImg">
+      <image src="{{movie.images.small}}"
+           alt=""
+           >
+      </image>
+    </view>
+    <scroll-view scroll-y class="content"
+            wx:if='movie'>
+      <view class="movie_detail_wrapper">
+        <image class="movie_face"
+             src="{{movie.images.small}}"
+             alt="">
+        </image>
+        <view class="movie_info">
+          <view class="title">{{movie.title}}</view>
+          <view class="director info">导演:{{movie.directors}} </view>
+          <view class="casts info">演员:{{movie.casts}} </view>
+          <view class="rate info">标签:
+            <view wx:for='{{movie.tags}}'
+                  wx:key='{{index}}'
+                  class="tag_item">{{item}}</view>
+          </view>
+          <rate class="rate info"
+                rate='{{movie.rating.average}}'></rate>
+          <view class="info">上映时间: {{movie.pubdate}}</view>
+        </view>
+        <view class="trailers">
+          <view class="label">预告片/剧照</view>
+          <scroll-view scroll-x class="trailers_box">
+            <view class="trailers_wrapper">
+              <view class='trailers_item'
+                    data-url="{{movie.trailers[0].resource_url}}"
+                    bindtap='showVideo'>
+                <i class="iconfont icon-bofang"></i>
+                <image src="{{movie.trailers[0].medium}}"
+                     alt="">
+                </image>
+              </view>
+              <view wx:for='{{movie.trailers}}'
+                    wx:key='{{index}}'
+                    class='trailers_item'>
+                <image src="{{item.medium}}"
+                     alt="">
+                </image>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+        <view class="desc">
+          <view class="label">剧情简介 :</view>
+          <view class="text">{{movie.summary}}</view>
+        </view>
+        <view class="comments" wx:if='{{comments.length}}'>
+          <view class="label">豆瓣精选短评:</view>
+          <view>
+            <view wx:for='{{comments}}'
+                wx:key='{{index}}'
+                class="comment_item">
+              <view class="user_info">
+                <image src="{{item.author.avatar}}"
+                     alt="">
+                </image>
+                <view class="info">
+                  <view class="name">{{item.author.name}}</view>
+                  <rate class="rate"
+                        rate='{{item.rating.value}}'></rate>
+                </view>
+              </view>
+              <view class="txt">
+                {{item.content}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <video-page videoUrl='{{videoSrc}}'
+                wx:if='{{videoSrc}}'
+                bindcloseVideo='closeVideo'></video-page>
+  </view>

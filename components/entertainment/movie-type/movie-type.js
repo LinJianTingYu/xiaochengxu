@@ -27,6 +27,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    // 展示电影详情
+    showMovieDetail (e) {
+      const id = e.currentTarget.dataset.id
+      this.triggerEvent('goMovieDetail', {id})
+    },
     handleMore() {
       this.triggerEvent('showMoreMovie', this.properties.title)
     }

@@ -8,14 +8,43 @@ Page({
    */
   data: {
     isSHowSearch: false,
-    book_hotList: []
+    books: [],
+    start: 0,
+    tipsText: "正在加载中...",
+    loadingMore: false
   },
-
+  // 获取书
+  getBooks() {
+    if (this.data.start > 12) {
+      this.setDate({
+        tipsText: '我也是有底线的'
+      })
+      return
+    }
+    http.request({
+      url: '/book/getBooks',
+      data: {
+        start: this.data.start
+      },
+      success: data => {
+        const books = data.data.map(item => {
+          item.title.replace(/\s+/g, "")
+          item.summary.replace(/\s+/g, "").split('/')[0]
+          item.comment.replace(/\s+/g, "")
+          return item
+        })
+        this.setData({
+          loadingMore: false,
+          books: this.data.books.concat(books)
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getBooks()
   },
 
   /**
@@ -29,27 +58,31 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    http.request({
-      url: 'book/hot_list',
-      success: res => {
-        this.setData({
-          book_hotList: res
-        })
-      }
-    })
   },
   http(query){
     
   },
   handleSearch(){
-    this.setData({
-      isSHowSearch: true
+    wx.navigateTo({
+      url: '../book-search/book-search',
     })
+    // this.setData({
+    //   isSHowSearch: true
+    // })
   },
   closeSearch(){
     this.setData({
       isSHowSearch: false
     })
+  },
+  // 获取更多书籍
+  getMoreBook() {
+    this.setData({
+      start: this.data.start + 1,
+      tipsText: "",
+      loadingMore: true
+    })
+    this.getBooks()
   },
   /**
    * 生命周期函数--监听页面隐藏

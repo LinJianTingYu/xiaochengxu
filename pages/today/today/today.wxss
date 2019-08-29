@@ -1,0 +1,90 @@
+/* pages/today/today.wxss */
+/* .Today {
+  background: rgb(247, 247, 247);
+  position: fixed;
+  top: 0.48rpx;
+  bottom: 1rpx;
+  width: 100vw;
+  z-index: 2;
+} */
+  .header {
+    padding: 0 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100rpx;
+    background: #fbf9f1;
+    color: black;
+  }
+    .weather {
+      display: flex;
+      align-items: center;
+      height: 80rpx;
+      font-size: 40rpx;
+    }
+      .weather image {
+        width: 100rpx;
+        height: 70rpx;
+      }
+      .info {
+        margin-left: 0.1rpx;
+      }
+        .temperature {
+          font-size: 34rpx;
+          line-height: 50rpx;
+        }
+        .temperatures {
+          font-size: 26rpx;
+        }
+    .laohuangli {
+      font-size: 32rpx;
+      width: 300rpx;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+      .laohuangli>view {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 40rpx;
+        white-space: nowrap;
+      }
+      .ji {
+        color: red;
+      }
+  .bgImg {
+    position: absolute;
+    width: 100vw;
+    top: 100rpx;
+    bottom: 0;
+    filter: blur(20px);
+  }
+    .bgImg image {
+      width: 100%;
+      height: 100%;
+    }
+  .histoies_wrapper {
+    position: absolute;
+    top: 100rpx;
+    bottom: 0;
+    overflow: hidden;
+  }
+    .histoies_box {
+      padding: 0 20rpx;
+    }
+      .history_item {
+        font-size: 28rpx;
+        padding: 10rpx 0;
+      }
+        text {
+          display: inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .time {
+          width: 20%;
+        }
+        .title {
+          width: 75%;
+        }

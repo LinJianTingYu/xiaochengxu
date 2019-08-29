@@ -1,0 +1,64 @@
+/* pages/paly/news.wxss */
+
+/* .news {
+  position: fixed;
+  top: 0.48rem;
+  bottom: 0rem;
+  width: 100vw;
+  background: white;
+  z-index: 2;
+} */
+  .type_box {
+    width: 100vw;
+    overflow: hidden;
+    border-bottom: 1px solid rgb(210, 210, 210);
+    height: 72rpx;
+  }
+    .wrapper {
+      width: 1000rpx;
+      height: 72rpx;
+    }
+      .type_item {
+        float: left;
+        margin: 0 20rpx 0;
+        font-size: 30rpx;
+        box-sizing: border-box;
+        line-height: 70rpx;
+      }
+        .type_item.active {
+          border-bottom: 1px solid red;
+          color: red;
+        }
+  .news_box {
+    padding: 0 20rpx;
+    box-sizing: border;
+    position: absolute;
+    top: 73rpx;
+    bottom: 0;
+    overflow: hidden;
+  }
+      .news_wrapper .news_item {
+        display: flex;
+        padding: 20rpx 0;
+        border-bottom: 1px solid rgb(210, 210, 210);
+      }
+        image {
+          width: 200rpx;
+          height: 140rpx;
+          border-radius: 10rpx;
+        }
+        .info {
+          flex: 1;
+          margin-left: 20rpx;
+        }
+          .title {
+            margin-top: 10rpx;
+            font-size: 28rpx;
+            line-height: 40rpx;
+            color: black;
+          }
+          .time {
+            font-size: 22rpx;
+            color: rgb(120, 120, 120);
+            line-height: 40rpx;
+          }

@@ -1,1 +1,28 @@
 /* components/rate/rate.wxss */
+.rate {
+  font-size: 26rpx;
+  color: gray;
+}
+  .rate_wrapper {
+    position: relative;
+    font-size: 24rpx;
+    display: inline-block;
+  }
+    .bg {
+      display: inline-block;
+    }
+    .active {
+      /* width: 25px; */
+      overflow: hidden;
+      top: 0;
+      position: absolute;
+      color: orange;
+    }
+  .rate > text {
+    font-size: 22rpx;
+    color: orange;
+    margin-left: 5rpx; 
+  }
+.no_rate {
+  font-size: 22rpx;
+}

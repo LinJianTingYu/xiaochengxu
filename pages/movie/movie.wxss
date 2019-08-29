@@ -19,7 +19,6 @@
       flex: 1;
       height: 70rpx;
       line-height: 70rpx;
-      margin-left: 6%;
       border-radius: 70rpx;
       text-align: center;
       display: flex;

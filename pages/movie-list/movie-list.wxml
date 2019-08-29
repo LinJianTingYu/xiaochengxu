@@ -1,0 +1,38 @@
+<!--components/entertainment/movie-list/movie-list.wxml-->
+<view class='book_list'>
+    <scroll-view scroll-y class="books" lower-threshold="20" bindscrolltolower="scrollBottom">
+      <ul>
+        <li class="movie_item"
+            wx:for='{{movies}}'
+            wx:key='{{index}}'
+            data-id="{{item.id}}"
+            bindtap="showMovieDetail">
+          <image class='movie_face' src="{{item.images.small}}"
+               alt=""></image>
+          <!-- <wxs module="base" src="../../../utils/base.wxs"></wxs> -->
+          <view class="desc">
+            <view class="info">
+              <p>
+                <span class="title">{{item.title}}</span>
+              </p>
+              <p>
+                <span>导演:</span>
+                <span class="name">{{item.directors}}</span>
+              </p>
+              <p>
+                <span>演员:</span>
+                <span class="name">{{item.casts}}</span>
+              </p>
+              <rate class="rate"
+                    rate='{{item.rating.average}}'></rate>
+            </view>
+            <view class="editor">
+              想看
+            </view>
+          </view>
+        </li>
+        <view class="loading"
+             wx:if='{{loadingMore}}'>{{tipsText}}</view>
+      </ul>
+    </scroll-view>
+  </view>

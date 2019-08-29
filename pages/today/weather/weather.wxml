@@ -1,0 +1,50 @@
+<!--pages/today/weather/weather.wxml-->
+<view class="weather">
+    <view class="bgImg">
+      <image src="/assets/img/weather_bg.jpg"
+           alt="">
+      </image>
+    </view>
+    <scroll-view scroll-y class="scroll_view">
+      <view class="weather_box">
+        <view class="today">
+          <view class="temperature">{{todayWeather.tem}}</view>
+          <view class="temperatures">{{todayWeather.tem2}}/{{todayWeather.tem1}}</view>
+          <view class="weather_desc">
+            <text>{{todayWeather.wea}} </text>
+            <text> 湿度{{todayWeather.humidity}}</text>
+          </view>
+        </view>
+        <scroll-view class="hours_box"
+                scroll-x
+                wx:if='{{hoursWeather}}'>
+          <view class="hours_wrapper">
+           <wxs src="../../../utils/base.wxs" module="base"/>
+            <view class="hours_item"
+                wx:for='{{hoursWeather}}'
+                wx:key='{{index}}'>
+              <text class="time">{{base.getDate(item.day)}}:00</text>
+              <text class="time">{{item.wea}}</text>
+              <text>{{item.tem}}</text>
+            </view>
+          </view>
+        </scroll-view>
+        <view class="future">
+          <view class="future_item"
+              wx:for='{{future}}'
+              wx:key='{{index}}'>
+            <text class="date">{{item.date}}</text>
+            <image src="/assets/img/weather/{{item.wea_img}}.png"
+                 alt="天气图片">
+            </image>
+            <text class="temperature">{{todayWeather.tem2}}/{{todayWeather.tem1}}
+            </text>
+          </view>
+        </view>
+        <view class="air">
+          <view id="air_echarts"></view>
+          <view class="tips">{{todayWeather.air_tips}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>

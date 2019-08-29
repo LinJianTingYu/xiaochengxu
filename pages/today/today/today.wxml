@@ -1,0 +1,39 @@
+<!--pages/today/today.wxml-->
+<view class="Today">
+    <view class="header">
+      <view class="weather"
+           wx:if='{{todayWeather}}'
+           bindtap='goWeather'>
+        <image src="/assets/img/weather/{{todayWeather.wea_img}}.png"
+             alt="天气图片">
+        </image>
+        <view class="info">
+          <view class="temperature">{{todayWeather.tem}}</view>
+          <view class="temperatures">{{todayWeather.tem2}}/{{todayWeather.tem1}}</view>
+        </view>
+      </view>
+      <view class="laohuangli"
+           wx:if='{{laohuangli}}'>
+        <view class="yi">宜: {{laohuangli.yi}}</view>
+        <view class="ji">忌: {{laohuangli.ji=='  '?laohuangli.ji:'无'}}</view>
+      </view>
+    </view>
+    <view class="bgImg">
+      <image src="/assets/img/history_bg.jpg"
+           alt="">
+      </image>
+    </view>
+    <scroll-view scroll-y class="histoies_wrapper"
+            wx:if='{{histories}}'>
+      <view class="histoies_box">
+        <view wx:for='{{histories}}'
+            wx:key='{{index}}'
+            class="history_item"
+            data-id="{{item.e_id}}"
+            bindtap='getHistoryDetail'>
+          <text class="time">{{item.date}}</text>
+          <text class="title">{{item.title}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>

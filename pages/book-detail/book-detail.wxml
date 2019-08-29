@@ -1,0 +1,28 @@
+<!--pages/book/book-detail/book-detail.wxml-->
+<view class="book_detail">
+    <view class="bgImg">
+      <image src="{{book.image}}"
+           alt=""
+           v-if='book'></image>
+    </view>
+    <scroll-view scroll-y class="content"
+            wx:if='{{book}}'>
+      <view class="movie_detail_wrapper">
+        <image class="movie_face"
+             src="{{book.image}}"
+             alt=""></image>
+        <view class="movie_info">
+          <view class="title">{{book.title}}</view>
+          <view class="director info">作者: {{book.author}}</view>
+          <view class="rate info">标签: {{book.tags}}</view>
+          <view class="casts info">出版: {{book.publisher}}{{book.pubdate}}</view>
+          <rate class="rate info"
+                rate='{{book.rating.average}}'></rate>
+        </view>
+        <view class="desc">
+          <view class="label">内容简介 :</view>
+          <view class="text">{{book.summary}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>

@@ -1,0 +1,49 @@
+/* pages/today/history-detail/history-detail.wxss */
+
+/* .history {
+  position: fixed;
+  top: 0.48rem;
+  bottom: 0;
+  width: 100vw;
+  z-index: 2;
+  background: white;
+} */
+  .bgImg {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    filter: blur(40px);
+  }
+    .bgImg image {
+      width: 100%;
+      height: 100%;
+    }
+  .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 20rpx;
+  }
+    .pic_wrapper {
+      text-align: center;
+    }
+      .pic_wrapper image {
+        width: 85vw;
+      }
+      .title {
+        width: 90vw;
+        font-size: 32rpx;
+        line-height: 45rpx;
+        font-weight: bold;
+        margin: 20rpx auto;
+      }
+    .text {
+      display: inline-block;
+      font-size: 30rpx;
+      line-height: 45rpx;
+      padding: 18rpx;
+      text-align: left;
+    }

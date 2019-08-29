@@ -19,7 +19,6 @@
              alt=""></image>
         <p class="name">{{item.title}}</p>
         <rate class="rate"
-              wx:if='{{item.rating.average}}'
               rate='{{item.rating.average}}'></rate>
       </li>
     </ul>

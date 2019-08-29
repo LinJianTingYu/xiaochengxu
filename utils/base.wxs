@@ -2,18 +2,14 @@ var base = {
   sliceMovies: function (arr) {
     return arr.slice(0,6)
   },
-  getDir: function (edis) {
-    console.log(edis)
-    let ed = ''
-    // edis.forEach(function (item){
-    //     ed += ' / ' + item.name
-    //   }
-    // }
-    return ed.slice(2)
+  setDate:function(date) {
+    console.log(date)
+    return date.split('日')[1].slice(0, -1)
   }
 }
 
 module.exports = {
   getNewMovies: base.sliceMovies,
-  getDir: base.getDir
+  getDir: base.getDir,
+  getDate: base.setDate
 }

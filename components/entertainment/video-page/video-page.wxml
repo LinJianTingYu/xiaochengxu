@@ -1,0 +1,6 @@
+<!--components/entertainment/video-page/video-page.wxml-->
+<div class="video" bindtap='closeVideo'>
+    <video
+      autoplay
+      src="{{videoUrl}}" controls></video>
+  </div>

@@ -1,9 +1,9 @@
 <!--pages/movie/movie.wxml-->
   <view class="movie">
     <view class='header'>
-      <image class='back'
+      <!-- <image class='back'
            src='/assets/img/icon/箭头.png'>
-      </image>
+      </image> -->
       <view class='search'
            bindtap='handleSearch'>
         <image class='search-icon'
@@ -15,7 +15,6 @@
     <wxs module="base" src="../../utils/base.wxs"></wxs>
     <scroll-view scroll-y class="movies">
       <movie-wrapper
-        wx:if='{{TheatersMovies.length}}'
         movies='{{base.getNewMovies(TheatersMovies)}}'
         title='{{typeTitle.theater}}'
         bindshowMoreMovie='showMoreMovie'
@@ -25,8 +24,7 @@
                         title='{{typeTitle.comming}}'
                         bindshowMoreMovie='showMoreMovie'
                         bindgoMovieDetail='goMovieDetail'
-                        class='margin_top'
-        wx:if='{{commingMovies.length}}'></movie-wrapper>
+                        class='margin_top'></movie-wrapper>
         <movie-wrapper movies="{{base.getNewMovies(topMovies)}}"
                         title='{{typeTitle.top}}'
                         bindshowMoreMovie='showMoreMovie'
@@ -42,11 +40,11 @@
                   @closeSearch='closeSearch'
                   @goMovieDetail='goMovieDetail'>
     </search-page> -->
-    <movie-list wx:if='{{isShowMovieList}}'
+    <!-- <movie-list wx:if='{{isShowMovieList}}'
               movies='{{moreMovies}}'
               title='{{moreMovieTitle}}'
               bindcloseMoreMovie='isShowMovieList=!isShowMovieList'
               bindgetMoreMovie='{{getMoreTypeMovie}}'
               loadingMore='{{loadingMore}}'>
-    </movie-list>
+    </movie-list> -->
   </view>

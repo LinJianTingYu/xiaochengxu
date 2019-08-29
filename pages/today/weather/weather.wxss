@@ -1,0 +1,100 @@
+/* pages/today/weather/weather.wxss */
+/* .weather {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 2;
+  background: white;
+} */
+  .bgImg {
+    position: absolute;
+    width: 100vw;
+    top: 80rpx;
+    bottom: 0;
+    filter: blur(40px);
+  }
+    .bgImg image {
+      width: 100%;
+      height: 100%;
+    }
+  .hours_box {
+    width: 100vw;
+    overflow: hidden;
+  }
+    .hours_wrapper {
+      overflow: hidden;
+      width: 1000rpx;
+      padding: 10rpx 0;
+      border-top: 1px solid rgb(240, 240, 240);
+    }
+      .hours_item {
+        text-align: center;
+        font-size: 24rpx;
+        width: 120rpx;
+        float: left;
+        display: flex;
+        flex-direction: column;
+        line-height: 45rpx;
+      }
+  .scroll_view {
+    color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+    .today {
+      padding: 20rpx 0;
+      text-align: center;
+    }
+      .today .temperature {
+      text-align: center;
+        font-size: 50rpx;
+      }
+      .temperatures {
+        margin: 15rpx 0 20rpx;
+        font-size: 30rpx;
+      }
+      .weather_desc {
+        font-size: 28rpx;
+      }
+    .future {
+      padding: 0 20rpx 20rpx;
+      box-sizing: border-box;
+      width: 100vw;
+    }
+      .future_item {
+        width: 100%;
+        display: flex;
+        font-size: 30rpx;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10rpx 0;
+        border-top: 1px solid rgba(245, 245, 245, 0.4);
+      }
+        .date {
+          width: 240rpx;
+          font-size: 30rpx;
+        }
+        .future_item image {
+          width: 90rpx;
+          height: 60rpx;
+        }
+        .future_item .temperature {
+          width: 240rpx;
+          text-align: right;
+        }
+    .air {
+      padding: 0 20rpx;
+      position: relative;
+    }
+      #air_echarts {
+        height: 340px;
+      }
+      .tips {
+        position: absolute;
+        top: 190px;
+        font-size: 26rpx;
+        line-height: 34rpx;
+      }

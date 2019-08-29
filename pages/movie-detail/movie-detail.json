@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "电影详情",
+  "usingComponents": {
+    "rate": "/components/rate/rate",
+    "video-page": "/components/entertainment/video-page/video-page"
+  }
+}

@@ -1,0 +1,29 @@
+<scroll-view scroll-y class="books" lower-threshold="20" bindscrolltolower="scrollBottom">
+  <view
+    class="movie_item"
+    wx:for='{{books}}'
+    wx:key='{{index}}'
+    data-bookId="{{item.bookId}}"
+    data-title='{{item.title}}'
+    bindtap='goBookDeatil'>
+    <image src="{{item.image}}" alt=""></image>
+    <view class="desc">
+      <view class="info">
+        <view class="title">
+          {{item.title}}
+        </view>
+        <view>
+          {{item.summary}}
+        </view>
+        <rate class="rate" rate='{{item.rate}}'></rate>
+        <view class="comment">
+          {{item.comment}}
+        </view>
+      </view>
+      <view class="editor">
+        想看
+      </view>
+    </view>
+  </view>
+  <view class="loading" wx:if='{{loadingMore}}'>{{tipsText}}</view>
+</scroll-view>

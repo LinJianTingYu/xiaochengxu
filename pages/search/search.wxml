@@ -1,0 +1,64 @@
+<!--components/entertainment/search.wxml-->
+<view class='search-page'>
+    <view class='header'>
+      <view class='search-box'>
+        <image class='search-icon' src="/assets/img/icon/search.png"></image>
+        <input value="{{query}}" bindconfirm='handleSearch' bindinput='queryChange' class="input" type="text" placeholder='电影名'/>
+        <image bindtap='clearSearch' class='clear-icon' src="/assets/img/icon/cancel.png"></image>
+      </view>
+      <!-- <span class='close-search' bindtap='closeSearch'>取消</span> -->
+    </view>
+    <view class='search-wrapper'>
+      <view class='search-content'>
+        <view class='search-hot' wx:if="{{searchHistory.length}}">
+          <view class='title'>
+            <span class='text'>历史搜索</span>
+            <span bindtap="clearHistory" class='clear'>清空</span>
+          </view>
+          <view class='tags'>
+            <text
+              wx:for="{{searchHistory}}"
+              wx:key="{{index}}"
+              class='tag-item'>{{item.title}}</text>
+          </view>
+        </view>
+        <view class='search-history'>
+          <view class='title'>
+            <span class='text'>热门搜索</span>
+          </view>
+          <view class='tags'>
+            <span
+              wx:for="{{hotMovies}}"
+              wx:key="{{index}}"
+              class='tag-item' data-id='{{item.id}}' data-title="{{item.title}}"
+              bindtap='showMovieDetail'>{{index+1}}、{{item.title}}</span>
+          </view>
+        </view>
+      </view>
+    </view>
+    <scroll-view scroll-y class='search-result' wx:if='{{suggestMovies.length}}'>
+      <view>
+        <view class="movies">
+          <view
+            wx:for='{{suggestMovies}}'
+            wx:key='{{index}}'>
+            <view class="movie" data-id='{{item.id}}' data-title="{{item.title}}" wx:if='item.type=="movie"' bindtap='showMovieDetail'>
+              <image src="{{item.img}}" alt=""></image>
+              <view class="desc">
+                <p>
+                  <span class="movie_name">{{item.title}}</span>
+                  <span class="year">{{item.year}}</span>
+                </p>
+                <p>
+                  <span class="sub_title">{{item.sub_title}}</span>
+                </p>
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- <view class='no-result' v-if="!searchResult.length">
+          <span class='text'>没有搜索到书籍</span>
+        </view> -->
+      </view>
+    </scroll-view>
+  </view>

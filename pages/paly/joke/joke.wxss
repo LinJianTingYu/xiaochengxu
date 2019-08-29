@@ -1,0 +1,34 @@
+/* pages/joke/joke.wxss */
+/* .joke {
+  position: fixed;
+  top: 0.48rem;
+  bottom: 0rem;
+  width: 100vw;
+  background: white;
+  z-index: 2;
+} */
+  .bgImg {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    filter: blur(40px);
+  }
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+    .jokes_wrapper {
+      padding: 0 20rpx;
+    }
+      .joke_item {
+        font-size: 28rpx;
+        line-height: 35rpx;
+        padding: 20rpx 0;
+      }

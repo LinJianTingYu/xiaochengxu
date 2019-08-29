@@ -1,0 +1,30 @@
+<!--pages/paly/news.wxml-->
+<view class="news">
+    <scroll-view class="type_box" scroll-x>
+      <view class="wrapper">
+        <view wx:for='{{types}}'
+            wx:key='{{index}}'
+            class="type_item {{currentType==item.value?'active':''}}"
+            data-value="{{item.value}}"
+            bindtap='changeType'>{{item.label}}</view>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y class="news_box"
+            wxx:if='{{news.length}}'>
+      <view class="news_wrapper">
+        <a wx:for='{{news}}'
+           wx:key='{{index}}'
+           class='news_item'
+           href="{{item.url}}">
+          <image src="{{item.thumbnail_pic_s}}"
+               alt="封面图">
+          </image>
+          <view class="info">
+            <view class="title">{{item.title}}</view>
+            <view class="time">{{item.date}}</view>
+          </view>
+        </a>
+      </view>
+      <!-- <view class="no_news" v-else>正在加载中...</view> -->
+    </scroll-view>
+  </view>

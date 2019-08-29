@@ -1,0 +1,133 @@
+/* pages/book-search/book-search.wxss */
+/* .search-page {
+  position: fixed;
+  top: .48rpx;
+  bottom: 0;
+  width: 100vw;
+  background: white;
+  z-index: 2;
+} */
+  .header {
+    display: flex;
+    background: white;
+    padding: 20rpx 10rpx;
+    height: 110rpx;
+    border-bottom: 1px solid rgb(247,247,247);
+    box-sizing: border-box;
+  }
+    .search-box {
+      display: flex;
+      background: rgb(247, 247, 247);
+      height: 70rpx;
+      border-radius: 70rpx;
+      width: 85%;
+      align-items: center;
+      padding: 0 30rpx;
+      box-sizing: border-box;
+    }
+      .search-icon {
+        width: 36rpx;
+        height: 36rpx;
+      }
+      .input {
+        flex: 1;
+        margin-left: 10rpx;
+        font-size: 32rpx;
+        color: rgb(150, 150, 150);
+        background: transparent;
+      }
+      .clear-icon {
+        width: 40rpx;
+        height: 40rpx;
+      }
+    .close-search {
+      flex: 1;
+      text-align: center;
+      line-height: 70rpx;
+      font-size: 32rpx;
+    }
+  .search-wrapper {
+    position: fixed;
+    top: 112rpx;
+    bottom: 0rpx;
+    width: 100vw;
+    overflow: hidden;
+  }
+    .search-content {
+      padding: 0 30rpx;
+    }
+      .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 66rpx;
+      }
+        .clear {
+          font-size: 26rpx;
+        }
+        .text {
+          font-size: 26rpx;
+          font-weight: bold;
+        }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+        .tag-item {
+          width: 50%;
+          box-sizing: border-box;
+          padding: 10px 20px 10px 5px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-size: 24rpx;
+          border-radius: 5rpx;
+        }
+      .search-history {
+        margin-top: 30rpx;
+      }
+  .search-result {
+    position: fixed;
+    top: 110rpx;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 26rpx;
+    background: white;
+    padding: 0 30rpx;
+    z-index: 2;
+    overflow: hidden;
+  }
+    .movies {
+    }
+      .movie {
+        display: flex;
+        padding: 10px 0;
+        border-bottom: 1px solid rgb(223,223,223);
+      }
+        .movie >image {
+          width: 80rpx;
+          height: 100rpx;
+        }
+        .desc {
+          flex: 1;
+          margin-left: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+          .desc> view {
+            color: #818181;
+            margin: 2px 0;
+          }
+          .movie_name {
+            display: inline-block;
+            max-width: 420rpx;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+            overflow: hidden;
+            font-size: 30rpx;
+            color: black;
+            margin-right: 10rpx;
+          }

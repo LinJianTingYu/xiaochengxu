@@ -1,0 +1,37 @@
+<!--pages/today/history-detail/history-detail.wxml-->
+<view class="history" wx:if="{{historyDetail}}">
+    <view class="bgImg">
+      <image src="/assets/img/history_bg.jpg"
+           alt="">
+      </image>
+    </view>
+    <scroll-view scroll-y class="content"
+            wx:if='{{historyDetail}}'>
+      <view>
+        <view class="pic_wrapper"
+             wx:if='{{pics.length}}'>
+          <image src="{{pics[0].url}}"
+               alt="">
+          </image>
+          <view class="title"
+             wx:if='{{pics[0].pic_title}}'>
+            {{pics[0].pic_title}}
+          </view>
+        </view>
+        <text class="text">{{historyDetail.content}}</text>
+        <view wx:if='{{pics.slice(1).length}}'>
+          <view class="pic_wrapper"
+               wx:for='{{pics.slice(1)}}'
+               wx:key='{{index}}'>
+            <image :src="item.url"
+                 alt="">
+            </image>
+            <view class="title"
+               wx:if='{{item.pic_title}}'>
+              {{item.pic_title}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>

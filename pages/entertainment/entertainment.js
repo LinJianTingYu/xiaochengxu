@@ -5,7 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-
     menus: [
       {
         title: '电影',
@@ -35,7 +34,28 @@ Page({
   },
 
   handleRoute (event) {
-    console.log(event.currentTarget.dataset.name)
+    const type = event.currentTarget.dataset.name
+    switch (type) {
+      case 'Movie':
+        wx.navigateTo({
+          url: "../movie/movie"
+        })
+        return
+      case 'Book':
+        wx.navigateTo({
+          url: "../book/book"
+        })
+        return
+      case "Joke":
+        wx.navigateTo({
+          url: '../paly/joke/joke',
+        })
+        return
+      case "News":
+        wx.navigateTo({
+          url: '../paly/news/news',
+        })
+    }
   },
 
   /**

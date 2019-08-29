@@ -1,14 +1,11 @@
 <!--components/rate/rate.wxml-->
-<template>
-  <div class="rate">
-    <div class="rate_wrapper">
-      <div ref='bgWidth'
-           class="bg">★★★★★</div>
-      <!-- <div class="active"
-           bind:style='{{width: setWidth(rate)}}'>★★★★★</div> -->
-    </div>
-    <span>{{rate}}</span>
-  </div>
-  <!-- <div class="no_rate"
-       wx:else>暂无评分</div> -->
-</template>
+  <view class="rate" wx:if="{{rate}}">
+    <view class="rate_wrapper">
+      <view ref='bgWidth'
+           class="bg">★★★★★</view>
+      <view class="active" id="bglyer" style="width:{{(rate * 10) + '%'}}">★★★★★</view>
+    </view>
+    <text>{{rate}}</text>
+  </view>
+  <view class="no_rate"
+       wx:if="{{!rate}}">暂无评分</view>

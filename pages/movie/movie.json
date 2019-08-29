@@ -1,7 +1,6 @@
 {
+  "navigationBarTitleText": "电影",
   "usingComponents": {
-    "SearchPage": "/components/entertainment/search/search",
-    "movie-wrapper": "/components/entertainment/movie-type/movie-type",
-    "movie-list": "/components/entertainment/movie-list/movie-list"
+    "movie-wrapper": "/components/entertainment/movie-type/movie-type"
   }
 }

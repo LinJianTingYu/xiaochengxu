@@ -1,0 +1,15 @@
+<!--pages/joke/joke.wxml-->
+  <view class="joke">
+    <view class="bgImg">
+      <image src="/assets/img/joke_bg.jpg"
+           alt="">
+      </image>
+    </view>
+    <scroll-view scroll-y class="content">
+      <view class="jokes_wrapper">
+        <view class="joke_item"
+            wx:for='{{jokes}}'
+            wx:key='{{index}}'>{{index+1}}、{{item.content}}</view>
+      </view>
+    </scroll-view >
+  </view>
