@@ -17,7 +17,6 @@ Page({
         bookId
       },
       success: data => {
-        console.log(data)
         let author = ''
         let tags = ''
         data.author.forEach(item => {
@@ -39,7 +38,8 @@ Page({
    */
   onLoad: function (options) {
     // 
-    this.getBookDetail(options.id)
+    console.log(options)
+    this.getBookDetail(options.bookId)
   },
 
   /**

@@ -27,8 +27,9 @@ Component({
    */
   methods: {
     showBookDetail(e){
+      console.log(e)
       wx.navigateTo({
-        url: '/pages/detail/detail?mid=' + e.currentTarget.dataset.book.id
+        url: '/pages/book-detail/book-detail?bookId=' + e.currentTarget.dataset.bookid
       })
     },
     scrollBottom(){

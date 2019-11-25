@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/classic/classic",
     "pages/today/today/today",
     "pages/entertainment/entertainment",
-    "pages/classic/classic",
     "pages/my/my",
     "pages/detail/detail",
     "pages/book/book",
@@ -16,6 +16,7 @@
     "pages/book-search/book-search",
     "pages/paly/news/news",
     "pages/today/weather/weather",
+    "pages/about/about",
     "pages/today/history-detail/history-detail"
   ],
   "window": {

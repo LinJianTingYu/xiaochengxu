@@ -5,11 +5,15 @@ var base = {
   setDate:function(date) {
     console.log(date)
     return date.split('日')[1].slice(0, -1)
+  },
+  sliceTip: function (arr) {
+    return arr.slice(0, -2)
   }
 }
 
 module.exports = {
   getNewMovies: base.sliceMovies,
   getDir: base.getDir,
-  getDate: base.setDate
+  getDate: base.setDate,
+  getTip: base.sliceTip
 }

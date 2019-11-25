@@ -32,3 +32,7 @@
         line-height: 35rpx;
         padding: 20rpx 0;
       }
+  .loadingMore {
+    font-size: 28rpx;
+    text-align: center
+  }

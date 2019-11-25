@@ -1,0 +1,4 @@
+<!--pages/about/about.wxml-->
+<view class="about">
+  <image class="about_bg" src="/assets/img/my/矩形-3@2x.png"></image>
+</view>

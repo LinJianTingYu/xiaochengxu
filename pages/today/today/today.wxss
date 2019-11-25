@@ -44,13 +44,20 @@
       justify-content: center;
     }
       .laohuangli>view {
-        overflow: hidden;
         text-overflow: ellipsis;
         line-height: 40rpx;
-        white-space: nowrap;
       }
       .ji {
-        color: red;
+        display: flex;
+      }
+      .ji .info {
+        width: 200rpx;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .yi {
+        display: flex;
+        margin-bottom: 4rpx; 
       }
   .bgImg {
     position: absolute;
@@ -87,4 +94,29 @@
         }
         .title {
           width: 75%;
+        }
+        .yi text:not(.title) {
+          flex:1;
+        }
+        .yi .title {
+          width: 38rpx;
+          height: 38rpx;
+          display: inline-block;border-radius: 50%;
+          border: 1rpx solid #08a942;
+          color: #08a942;
+          text-align: center;
+          line-height: 38rpx;
+          font-size: 24rpx;
+          margin-right: 10rpx;
+        }
+        .ji .title {
+          width: 38rpx;
+          height: 38rpx;
+          display: inline-block;border-radius: 50%;
+          border: 1rpx solid #e35c57;
+          color: #e35c57;
+          text-align: center;
+          line-height: 38rpx;
+          font-size: 24rpx;
+          margin-right: 10rpx;
         }

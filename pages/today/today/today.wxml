@@ -14,8 +14,8 @@
       </view>
       <view class="laohuangli"
            wx:if='{{laohuangli}}'>
-        <view class="yi">宜: {{laohuangli.yi}}</view>
-        <view class="ji">忌: {{laohuangli.ji=='  '?laohuangli.ji:'无'}}</view>
+        <view class="yi"><text class="title">宜</text><text>{{laohuangli.yi}}</text></view>
+        <view class="ji"><text class="title">忌</text><text class="info">{{laohuangli.ji}}</text></view>
       </view>
     </view>
     <view class="bgImg">

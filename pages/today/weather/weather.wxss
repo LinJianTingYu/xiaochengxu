@@ -1,12 +1,12 @@
 /* pages/today/weather/weather.wxss */
-/* .weather {
+.weather {
   position: fixed;
   top: 0;
   bottom: 0;
   width: 100vw;
   z-index: 2;
   background: white;
-} */
+}
   .bgImg {
     position: absolute;
     width: 100vw;
@@ -85,16 +85,61 @@
           width: 240rpx;
           text-align: right;
         }
-    .air {
+        .list {
+          padding: 0 10rpx;
+        }
+        .list .title {
+          font-size: 32rpx;
+          margin: 20rpx 0 10rpx;
+        }
+        .list .air_info {
+          font-size: 28rpx;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .list .iconfont {
+          font-size: 100rpx;
+          color: lightgreen;
+        }
+        .list .air_leave {
+          flex: 1;
+          font-size: 40rpx;
+          text-align: center;
+        }
+        .list .air_tips {
+          width: 490rpx;
+        }
+  .tips {
+    overflow: hidden;
+  }
+  .tips>.title {
+    font-size: 32rpx;
+    margin-top: 10rpx;
+    padding: 0 10rpx;
+  }
+  .tip_item {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 33.3vw;
+    padding: 10rpx;
+    box-sizing: border-box;
+  }
+  .tip_item .iconfont{
+    font-size: 70rpx;
+  }
+  .tip_item .level{
+    font-size: 36rpx;
+  }
+  .tip_item .title{
+    font-size: 30rpx;
+  }
+    /* .air {
       padding: 0 20rpx;
-      position: relative;
-    }
-      #air_echarts {
-        height: 340px;
-      }
-      .tips {
-        position: absolute;
-        top: 190px;
-        font-size: 26rpx;
-        line-height: 34rpx;
-      }
+      top: 190px;
+      font-size: 26rpx;
+      line-height: 34rpx;
+    } */

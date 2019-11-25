@@ -1,0 +1,11 @@
+/* pages/about/about.wxss */
+.about {
+  /* background: url('../../assetes/img/矩形-3@2x.png') no-repeat;
+  background-size: cover; */
+  width: 100vw;
+  height:100vh;
+}
+.about_bg {
+  width: 100vw;
+  height:100%;
+}

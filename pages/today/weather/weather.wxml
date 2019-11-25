@@ -1,5 +1,6 @@
 <!--pages/today/weather/weather.wxml-->
 <view class="weather">
+           <wxs src="../../../utils/base.wxs" module="base"/>
     <view class="bgImg">
       <image src="/assets/img/weather_bg.jpg"
            alt="">
@@ -19,7 +20,6 @@
                 scroll-x
                 wx:if='{{hoursWeather}}'>
           <view class="hours_wrapper">
-           <wxs src="../../../utils/base.wxs" module="base"/>
             <view class="hours_item"
                 wx:for='{{hoursWeather}}'
                 wx:key='{{index}}'>
@@ -41,9 +41,31 @@
             </text>
           </view>
         </view>
-        <view class="air">
-          <view id="air_echarts"></view>
-          <view class="tips">{{todayWeather.air_tips}}</view>
+        <view class="air list">
+          <view class="title">空气质量</view>
+          <view class="air_info">
+            <i class="iconfont icon-kongqizhiliang"></i>
+            <view class="air_leave">{{todayWeather.air_level}}</view>
+            <view class="air_tips">{{todayWeather.air_tips}}</view>
+          </view>
+        </view>
+        <view class="win list">
+          <view class="title">风向</view>
+          <view class="air_info">
+            <i class="iconfont icon-wind-direction"></i>
+            <view class="air_leave">{{todayWeather.win_speed}}</view>
+            <view class="air_tips">{{todayWeather.win}}</view>
+          </view>
+        </view>
+        <view class="tips">
+          <view class="title">生活提示</view>
+          <view wx:for="{{todayWeather.index}}" wx:key="{{index}}"
+          class="tip_item"
+          wx:if="{{index!=1}}">
+          <i class="iconfont {{index_icons[index].icon}}"></i>
+          <text class="level">{{item.level}}</text>
+          <text class="title">{{base.getTip(item.title)}}</text>
+          </view>
         </view>
       </view>
     </scroll-view>

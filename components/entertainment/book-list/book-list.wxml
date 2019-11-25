@@ -5,7 +5,7 @@
     wx:key='{{index}}'
     data-bookId="{{item.bookId}}"
     data-title='{{item.title}}'
-    bindtap='goBookDeatil'>
+    bindtap='showBookDetail'>
     <image src="{{item.image}}" alt=""></image>
     <view class="desc">
       <view class="info">
